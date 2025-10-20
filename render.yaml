@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: la-plume-des-anges
+    env: static
+    buildCommand: echo "Site statique"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
